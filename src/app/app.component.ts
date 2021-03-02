@@ -44,7 +44,6 @@ export class AppComponent implements OnInit {
         .pipe(
           filter(v => !this.paused),
           map(v => {
-            console.log('THIS TIME',this.currentTime)
             this.currentTime += 1;
             return this.currentTime;
           }),
@@ -108,7 +107,7 @@ export class AppComponent implements OnInit {
 
   debounce() {
     this.clicked++;
-    if(this.clicked === 2) {
+    if (this.clicked === 2) {
       this.pause();
     }
   }
